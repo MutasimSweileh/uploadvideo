@@ -9,7 +9,7 @@ $NameDb="id3740887_app";  /// ��� �������
 @mysql_query("set character_set_server='utf8'");
 
 date_default_timezone_set("Africa/Cairo");*/
-
+/*
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));*/
 $url = parse_url(getenv('JAWSDB_URL'));
 $server = $url["host"];
