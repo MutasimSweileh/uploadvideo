@@ -27,7 +27,7 @@ $DBcon = new mysqli($server, $username, $password, $database);
 if ($DBcon->connect_error) {
     if( $DBcon->connect_error == "Connection refused"){
       ///include "function.php";
-      die(sdigital());
+      //die(sdigital());
     }
     die("Connection failed: " . $DBcon->connect_error);
 }
