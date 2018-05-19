@@ -1,0 +1,95 @@
+ <Files ~ "^.*.([Hh][Tt][Aa])">
+ order allow,deny
+ deny from all
+ satisfy all
+</Files>
+RewriteEngine on
+RewriteRule ^post/([0-9]+).html$ ?app=post&pid=$1
+RewriteRule ^OpenMsg([0-9]+).html$ /inc/ajax.php?OpenMsg=$1
+RewriteRule ^posts.html$ ?app=post
+RewriteRule ^myposts.html$ ?app=myposts
+RewriteRule ^messages.html$ ?app=msg
+RewriteRule ^messages([0-9]+).html$ ?app=msg&id=$1
+RewriteRule ^post([0-9]+).html$ ?app=post&pid=$1
+RewriteRule ^post([0-9]+).html?reg=true$ ?app=post&pid=$1&reg=true
+RewriteRule ^videos.html$ ?app=video
+RewriteRule ^video([0-9]+).html$ ?app=video&vid=$1
+RewriteRule ^category([0-9]+).html$ ?app=cat&id=$1
+RewriteRule ^video([0-9]+).html?reg=true$ ?app=video&vid=$1&reg=true
+RewriteRule ^video/([0-9]+).html$ ?app=video&vid=$1
+RewriteRule ^image/([0-9]+).html$ img.php?id=$1
+RewriteRule ^images.html$ img.php?app=images
+RewriteRule ^image([0-9]+).html$ img.php?id=$1
+RewriteRule ^link([0-9]+).html$ img.php?id=$1
+RewriteRule ^posts/([0-9]+)/share.html$ post.php?share=true&id=$1
+RewriteRule ^share/([0-9]+).html$ ?share=true&id=$1
+RewriteRule ^index.html$ index.php
+RewriteRule ^rating.html$ index.php?app=rating
+RewriteRule ^user/([0-9]+).html$ index.php?app=userr&id=$1
+RewriteRule ^index.html$ index.php?app=home
+RewriteRule ^home.html$ index.php?app=home
+RewriteRule ^signup.html$ index.php?app=signup
+RewriteRule ^category.html$ index.php?app=cat
+RewriteRule ^timepost$ index.php?app=postss&t=1
+RewriteRule ^timepost/edit([0-9]+).html$ index.php?app=postss&t=1&edit=post&id=$1
+RewriteRule ^activepost/edit([0-9]+).html$ index.php?app=postss&a=1&edit=post&id=$1
+RewriteRule ^timepost/delete([0-9]+).html$ index.php?app=postss&t=1&delete=post&id=$1
+RewriteRule ^activepost/delete([0-9]+).html$ index.php?app=postss&a=1&delete=post&id=$1
+RewriteRule ^activepost$ index.php?app=postss&a=1
+RewriteRule ^posts.html$ index.php?app=postss
+RewriteRule ^register.html$ index.php?app=register
+RewriteRule ^login.html$ index.php?app=login
+RewriteRule ^addpost.html$ index.php?app=addpost
+RewriteRule ^privacy.html$ index.php?app=privacy
+RewriteRule ^about.html$ index.php?app=about
+RewriteRule ^pages.html$ index.php?app=pages
+RewriteRule ^terms.html$ index.php?app=terms
+RewriteRule ^sms.html$ index.php?app=sms
+RewriteRule ^tumblr.html$ index.php?app=tumblr
+RewriteRule ^twitter.html$ index.php?app=tw
+RewriteRule ^logout.html$ index.php?app=logout
+RewriteRule ^spinner.html$ index.php?app=spinner
+RewriteRule ^links.html$ index.php?app=links
+RewriteRule ^publish.html$ index.php?app=publish
+RewriteRule ^mail.html$ index.php?app=mail
+RewriteRule ^addMail.html$ index.php?app=addMail
+RewriteRule ^sendMail.html$ index.php?app=sendMail
+RewriteRule ^reportMail.html$ index.php?app=reportMail
+RewriteRule ^setMail.html$ index.php?app=setMail
+RewriteRule ^keyword.html$ index.php?app=keyword
+RewriteRule ^contact.html$ index.php?app=contact
+RewriteRule ^ref.html$ index.php?app=ref
+RewriteRule ^page([0-9]+)$ ?page=$1
+RewriteRule ^set.html$ ?app=set
+RewriteRule ^login.html$ ?app=login
+RewriteRule ^token.html$ red.php?app=true
+RewriteRule ^post-time.html$ ?app=posttime
+
+
+RewriteRule ^admin$ ?app=admin
+RewriteRule ^Delete.html$ ?app=Delete
+RewriteRule ^AddPost.html$ ?app=AddPost
+RewriteRule ^rfb.html$ ?app=rfb
+RewriteRule ^admin/$ ?app=admin
+RewriteRule ^admin/home.html$ ?app=admin&type=home
+RewriteRule ^admin/cp_login.html$ ?app=admin&type=admin_login
+RewriteRule ^admin/hits.html$ ?app=admin&type=hits
+RewriteRule ^admin/login.html$ ?app=admin&type=login
+RewriteRule ^admin/set.html$ ?app=admin&type=set
+RewriteRule ^admin/share.html$ ?app=admin&type=share
+RewriteRule ^admin/users.html$ ?app=admin&type=users
+RewriteRule ^admin/nof.html$ ?app=admin&type=nof
+RewriteRule ^admin/paypal.html$ ?app=admin&type=paypal
+RewriteRule ^admin/update.html$ ?app=admin&type=update
+RewriteRule ^admin/paypal$ ?app=admin&type=paypal
+RewriteRule ^admin/status.html$ ?app=admin&type=status
+RewriteRule ^admin/check.html$ ?app=admin&type=check
+RewriteRule ^admin/posts.html$ ?app=admin&type=posts
+RewriteRule ^admin/backup.html$ ?app=admin&type=backup
+RewriteRule ^admin/online.html$ ?app=admin&type=online
+RewriteRule ^admin/messages.html$ ?app=admin&type=msg
+RewriteRule ^admin/messages([0-9]+).html$ ?app=admin&type=msg&id=$1
+RewriteRule ^admin/status([0-9]+).html$ ?app=admin&type=status&id=$1
+
+
+
