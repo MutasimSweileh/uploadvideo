@@ -86,21 +86,7 @@
     }
 });
 */
-            flowplayer('#player', {
-            live: true,  // set if it's a live stream
-            ratio: 9/16, // set the aspect ratio of the stream
-            clip: {
-                sources: [
-                    // path to the HLS m3u8
-                   // { type: "application/x-mpegurl", src: "http://vps8542.godaddy.com.0o010o0.com/live/41.44.197.119/H5oQg58l/2.m3u8"},
-                  //  { type: "application/x-mpegurl", src: "http://streaming.i-sat.tv:1935/live/cbcone/playlist.m3u8"},
-                   // { type: "application/x-mpegurl", src: "http://dmithrvll.cdn.mangomolo.com/dubaione/smil:dubaione.smil/playlist.m3u8"},
-                    { type: "application/x-mpegurl", src: "http://167.99.232.44:8000/hls/bein.m3u8"},
-                    // path to an optional MP4 fallback
-                   // { type: "video/mp4", src: "//yourserver/path/index.mp4"}
-                ]
-            }
-        });
+
         $(function () {
 
         var api = flowplayer(".flowplayer",{});
