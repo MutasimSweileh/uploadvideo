@@ -48,6 +48,7 @@
         <script src="js/flowplayer.min.js"></script>
         <script>$('.dropdown-toggle').dropdown()</script>
         <script>
+            /*
            flowplayer("#player", {
     clip: {
         title: "Friends Bein Sport 1 :)",
@@ -61,17 +62,17 @@
            { type: "application/x-mpegurl",
               src:  "http://167.99.232.44:8000/hls/bein.m3u8" },
 
-            /* manual selection */
+            // manual selection 
 
-           /* // default VOD resolution in 2 formats
+           // default VOD resolution in 2 formats
             { type: "video/webm",
               src:  "//cdn.flowplayer.org/202777/84049-bauhaus.webm" },
             { type: "video/mp4",
-              src:  "//cdn.flowplayer.org/202777/84049-bauhaus.mp4" },*/
+              src:  "//cdn.flowplayer.org/202777/84049-bauhaus.mp4" },
 
             // default VOD resolution via RTMP for Flash in old browsers
-          /* { type: "video/flash",
-              src:  "bein" }*/
+          { type: "video/flash",
+              src:  "bein" }
         ]
     },
     //rtmp: "rtmp://167.99.232.44/live",
@@ -84,6 +85,22 @@
         iframe: "https://www.facebook.com/mohtasm.sawilh"
     }
 });
+*/
+            flowplayer('#player', {
+            live: true,  // set if it's a live stream
+            ratio: 9/16, // set the aspect ratio of the stream
+            clip: {
+                sources: [
+                    // path to the HLS m3u8
+                   // { type: "application/x-mpegurl", src: "http://vps8542.godaddy.com.0o010o0.com/live/41.44.197.119/H5oQg58l/2.m3u8"},
+                  //  { type: "application/x-mpegurl", src: "http://streaming.i-sat.tv:1935/live/cbcone/playlist.m3u8"},
+                   // { type: "application/x-mpegurl", src: "http://dmithrvll.cdn.mangomolo.com/dubaione/smil:dubaione.smil/playlist.m3u8"},
+                    { type: "application/x-mpegurl", src: "http://167.99.232.44:8000/hls/bein.m3u8"},
+                    // path to an optional MP4 fallback
+                   // { type: "video/mp4", src: "//yourserver/path/index.mp4"}
+                ]
+            }
+        });
         $(function () {
 
         var api = flowplayer(".flowplayer",{});
