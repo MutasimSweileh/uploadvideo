@@ -19,7 +19,7 @@
 
    <video data-title="Freinds Bien Sport <?=isv("vid")?>">
 <source type="application/x-mpegurl"
-        src="http://vps8542.godaddy.com.0o010o0.com/live/156.211.132.63/H5oQg58l/<?=isv("vid")?>.m3u8">
+        src="http://167.99.232.44:8000/hls/bein<?=(isv("vid") == 1?"":(isv("vid")?isv("vid"):""))?>_src.m3u8">
    </video>
 
 </div>
