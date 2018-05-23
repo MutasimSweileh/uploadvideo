@@ -58,8 +58,8 @@
 
         sources: [
             // HLS for automatic quality selection
-          /*  { type: "application/x-mpegurl",
-              src:  "//cdn.flowplayer.org/202777/84049-bauhaus.m3u8" },*/
+           { type: "application/x-mpegurl",
+              src:  "http://167.99.232.44:8000/hls/bein.m3u8" },
 
             /* manual selection */
 
@@ -70,12 +70,12 @@
               src:  "//cdn.flowplayer.org/202777/84049-bauhaus.mp4" },*/
 
             // default VOD resolution via RTMP for Flash in old browsers
-           { type: "video/flash",
-              src:  "bein" }
+          /* { type: "video/flash",
+              src:  "bein" }*/
         ]
     },
-    rtmp: "rtmp://167.99.232.44/live",
-    splash: "//drive.cdn.flowplayer.org/202777/84049-snap.jpg",
+    //rtmp: "rtmp://167.99.232.44/live",
+    //splash: "//drive.cdn.flowplayer.org/202777/84049-snap.jpg",
     ratio: 5/12,
     live: true,
     twitter: "https://www.facebook.com/mohtasm.sawilh",
