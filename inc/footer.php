@@ -48,26 +48,42 @@
         <script src="js/flowplayer.min.js"></script>
         <script>$('.dropdown-toggle').dropdown()</script>
         <script>
-      flowplayer("#player", "http://releases.flowplayer.org/swf/flowplayer-3.2.18.swf", {
-
+           flowplayer("#player", {
     clip: {
-        url: 'bein',
-        live: true,
-        // configure clip to use influxis as our provider, it uses our rtmp plugin
-        provider: 'rtmp'
-    },
+        title: "Friends Bein Sport 1 :)",
 
-    // streaming plugins are configured under the plugins node
-    plugins: {
-        // here is our rtpm plugin configuration
-        rtmp: {
-            url: "http://releases.flowplayer.org/flowplayer.rtmp/flowplayer.rtmp-3.2.13.swf",
-            // netConnectionUrl defines where the streams are found
-            netConnectionUrl: 'rtmp://167.99.232.44/live',
-            subscribe:true
-        }
+        // VOD quality selector plugin configuration
+        qualities: ["160p", "260p", "530p", "800p"],
+        defaultQuality: "260p",
+
+        sources: [
+            // HLS for automatic quality selection
+          /*  { type: "application/x-mpegurl",
+              src:  "//cdn.flowplayer.org/202777/84049-bauhaus.m3u8" },*/
+
+            /* manual selection */
+
+           /* // default VOD resolution in 2 formats
+            { type: "video/webm",
+              src:  "//cdn.flowplayer.org/202777/84049-bauhaus.webm" },
+            { type: "video/mp4",
+              src:  "//cdn.flowplayer.org/202777/84049-bauhaus.mp4" },*/
+
+            // default VOD resolution via RTMP for Flash in old browsers
+           { type: "video/flash",
+              src:  "bein" }
+        ]
+    },
+    rtmp: "rtmp://167.99.232.44/live",
+    splash: "//drive.cdn.flowplayer.org/202777/84049-snap.jpg",
+    ratio: 5/12,
+    live: true,
+    twitter: "https://www.facebook.com/mohtasm.sawilh",
+    facebook: "https://www.facebook.com/mohtasm.sawilh",
+    embed: {
+        iframe: "https://www.facebook.com/mohtasm.sawilh"
     }
-     });
+});
         $(function () {
 
         var api = flowplayer(".flowplayer",{});
