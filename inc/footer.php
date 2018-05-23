@@ -45,11 +45,30 @@
         <script src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/menu.js"></script>
         <script src="js/plagn.js"></script>
-        <script src="js/flowplayer.min.js"></script>
+       <!-- <script src="js/flowplayer.min.js"></script>-->
+       <script src="https://releases.flowplayer.org/7.2.6/flowplayer.min.js"></script>
+        <script src="//releases.flowplayer.org/hlsjs/flowplayer.hlsjs.light.min.js"></script>
         <script>$('.dropdown-toggle').dropdown()</script>
-        <script>
-            /*
-           flowplayer("#player", {
+
+       <script>
+       /*
+        flowplayer('#player', {
+            live: true,  // set if it's a live stream
+            ratio: 9/16, // set the aspect ratio of the stream
+            clip: {
+                sources: [
+                    // path to the HLS m3u8
+                   // { type: "application/x-mpegurl", src: "http://vps8542.godaddy.com.0o010o0.com/live/41.44.197.119/H5oQg58l/2.m3u8"},
+                  //  { type: "application/x-mpegurl", src: "http://streaming.i-sat.tv:1935/live/cbcone/playlist.m3u8"},
+                   // { type: "application/x-mpegurl", src: "http://dmithrvll.cdn.mangomolo.com/dubaione/smil:dubaione.smil/playlist.m3u8"},
+                    { type: "application/x-mpegurl", src: "http://s1.electru.biz:8080/live/megolove61@gmail.com/8Pi8b62lUy/31309.m3u8"},
+                    // path to an optional MP4 fallback
+                   // { type: "video/mp4", src: "//yourserver/path/index.mp4"}
+                ]
+            }
+        });
+      */
+      flowplayer("#player", {
     clip: {
         title: "Friends Bein Sport 1 :)",
 
@@ -59,24 +78,24 @@
 
         sources: [
             // HLS for automatic quality selection
-           { type: "application/x-mpegurl",
-              src:  "http://167.99.232.44:8000/hls/bein.m3u8" },
+          /*  { type: "application/x-mpegurl",
+              src:  "//cdn.flowplayer.org/202777/84049-bauhaus.m3u8" },*/
 
-            // manual selection 
+            /* manual selection */
 
-           // default VOD resolution in 2 formats
+           /* // default VOD resolution in 2 formats
             { type: "video/webm",
               src:  "//cdn.flowplayer.org/202777/84049-bauhaus.webm" },
             { type: "video/mp4",
-              src:  "//cdn.flowplayer.org/202777/84049-bauhaus.mp4" },
+              src:  "//cdn.flowplayer.org/202777/84049-bauhaus.mp4" },*/
 
             // default VOD resolution via RTMP for Flash in old browsers
-          { type: "video/flash",
+           { type: "video/flash",
               src:  "bein" }
         ]
     },
-    //rtmp: "rtmp://167.99.232.44/live",
-    //splash: "//drive.cdn.flowplayer.org/202777/84049-snap.jpg",
+    rtmp: "rtmp://167.99.232.44/live",
+    splash: "//drive.cdn.flowplayer.org/202777/84049-snap.jpg",
     ratio: 5/12,
     live: true,
     twitter: "https://www.facebook.com/mohtasm.sawilh",
@@ -85,9 +104,12 @@
         iframe: "https://www.facebook.com/mohtasm.sawilh"
     }
 });
-*/
 
-        $(function () {
+     </script>
+
+
+        <script>
+       $(function () {
 
         var api = flowplayer(".flowplayer",{});
         api.on("pause", function (e, api) {
@@ -95,8 +117,10 @@
         }).on("progress", function (e, api) {
         var pos =  checkVideoProgress();
         if(pos >= 5){
-       // api.toggle();
-       // $("#myOffer").modal("show");
+        <?php if(!isv("bein")){ ?>
+        api.toggle();
+        $("#myOffer").modal("show");
+        <?php } ?>
         }
         });
 
