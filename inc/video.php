@@ -2,9 +2,8 @@
       <div class="color-000">
         <section class="video-section">
           <div class="container">
-            <iframe  style="display: none" src="https://player.vimeo.com/video/120358066?byline=0&portrait=0" width="1100" height="570" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-<!--                  <div class="flowplayer"
+<?php  if(!isv("bein")){ ?>
+                  <div class="flowplayer"
                      data-aspect-ratio="12:5">
                    <video>
 
@@ -12,17 +11,19 @@
                       <source type="video/mp4"
                               src="https://edge.flowplayer.org/functional.mp4">
                       </video>
-                </div>-->
-                <div id="playere"></div>
+                </div>
+
+<?php }else{ ?>
 
 <div data-live="true" data-ratio="0.5625" data-share="false" class="flowplayer">
 
-   <video data-title="Live stream">
+   <video data-title="Freinds Bien Sport <?=isv("vid")?>">
 <source type="application/x-mpegurl"
-        src="http://167.99.232.44:8000/hls/bein_src.m3u8">
+        src="http://vps8542.godaddy.com.0o010o0.com/live/156.211.132.63/H5oQg58l/<?=isv("vid")?>.m3u8">
    </video>
 
 </div>
+<?php } ?>
            <div class="video-right">
             <h2>Forfeited you engrossed but gay sometimes explained</h2>
             <p>By <a href="#">Mohtasm Mohamed</a></p>
