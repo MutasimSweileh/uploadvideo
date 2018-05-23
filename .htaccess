@@ -16,6 +16,7 @@ RewriteRule ^videos.html$ ?app=video
 RewriteRule ^video([0-9]+).html$ ?app=video&vid=$1
 RewriteRule ^category([0-9]+).html$ ?app=cat&id=$1
 RewriteRule ^video([0-9]+).html?reg=true$ ?app=video&vid=$1&reg=true
+RewriteRule ^bein([0-9]+).html?reg=true$ ?app=video&bein=true&vid=$1&reg=true
 RewriteRule ^video/([0-9]+).html$ ?app=video&vid=$1
 RewriteRule ^image/([0-9]+).html$ img.php?id=$1
 RewriteRule ^images.html$ img.php?app=images
