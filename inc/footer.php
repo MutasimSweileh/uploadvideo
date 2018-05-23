@@ -109,8 +109,8 @@
         }).on("progress", function (e, api) {
         var pos =  checkVideoProgress();
         if(pos >= 5){
-        api.toggle();
-        $("#myOffer").modal("show");
+       // api.toggle();
+       // $("#myOffer").modal("show");
         }
         });
 
