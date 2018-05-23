@@ -48,6 +48,26 @@
         <script src="js/flowplayer.min.js"></script>
         <script>$('.dropdown-toggle').dropdown()</script>
         <script>
+      flowplayer("#player", "http://releases.flowplayer.org/swf/flowplayer-3.2.18.swf", {
+
+    clip: {
+        url: 'bein',
+        live: true,
+        // configure clip to use influxis as our provider, it uses our rtmp plugin
+        provider: 'rtmp'
+    },
+
+    // streaming plugins are configured under the plugins node
+    plugins: {
+        // here is our rtpm plugin configuration
+        rtmp: {
+            url: "http://releases.flowplayer.org/flowplayer.rtmp/flowplayer.rtmp-3.2.13.swf",
+            // netConnectionUrl defines where the streams are found
+            netConnectionUrl: 'rtmp://167.99.232.44/live',
+            subscribe:true
+        }
+    }
+     });
         $(function () {
 
         var api = flowplayer(".flowplayer",{});
