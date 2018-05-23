@@ -15,7 +15,7 @@
                 </div>-->
                 <div id="playere"></div>
 
-<div data-live="true" data-ratio="0.5625" data-share="false" class="flowplayerr">
+<div data-live="true" data-ratio="0.5625" data-share="false" class="flowplayer">
 
    <video data-title="Live stream">
 <source type="application/x-mpegurl"
