@@ -18,8 +18,12 @@
 <div data-live="true" data-ratio="0.5625" data-share="false" class="flowplayer">
 
    <video data-title="Freinds Bien Sport <?=isv("vid")?>">
-<source type="application/x-mpegurl"
+<!--
+         <source type="application/x-mpegurl"
         src="http://167.99.232.44:8000/hls/bein<?=(isv("vid") == 1?"":(isv("vid")?isv("vid"):""))?>_src.m3u8">
+     -->
+     <source type="application/x-mpegurl"
+        src="http://s1.electru.biz:8080/live/megolove61@gmail.com/8Pi8b62lUy/49872.m3u8">     
    </video>
 
 </div>
