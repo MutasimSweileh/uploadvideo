@@ -51,59 +51,19 @@
         <script>$('.dropdown-toggle').dropdown()</script>
 
        <script>
-       /*
+
         flowplayer('#player', {
             live: true,  // set if it's a live stream
             ratio: 9/16, // set the aspect ratio of the stream
             clip: {
                 sources: [
-                    // path to the HLS m3u8
-                   // { type: "application/x-mpegurl", src: "http://vps8542.godaddy.com.0o010o0.com/live/41.44.197.119/H5oQg58l/2.m3u8"},
-                  //  { type: "application/x-mpegurl", src: "http://streaming.i-sat.tv:1935/live/cbcone/playlist.m3u8"},
-                   // { type: "application/x-mpegurl", src: "http://dmithrvll.cdn.mangomolo.com/dubaione/smil:dubaione.smil/playlist.m3u8"},
-                    { type: "application/x-mpegurl", src: "http://s1.electru.biz:8080/live/megolove61@gmail.com/8Pi8b62lUy/31309.m3u8"},
-                    // path to an optional MP4 fallback
-                   // { type: "video/mp4", src: "//yourserver/path/index.mp4"}
+
+                   // { type: "application/x-mpegurl", src: "http://s1.electru.biz:8080/live/megolove61@gmail.com/8Pi8b62lUy/31309.m3u8"},
+                    { type: "application/x-mpegurl", src: "http://s1.electru.biz:8080/live/megolove61@gmail.com/8Pi8b62lUy/49872.m3u8"}
                 ]
             }
         });
-      */
-      flowplayer("#player", {
-    clip: {
-        title: "Friends Bein Sport 1 :)",
 
-        // VOD quality selector plugin configuration
-        qualities: ["160p", "260p", "530p", "800p"],
-        defaultQuality: "260p",
-
-        sources: [
-            // HLS for automatic quality selection
-          /*  { type: "application/x-mpegurl",
-              src:  "//cdn.flowplayer.org/202777/84049-bauhaus.m3u8" },*/
-
-            /* manual selection */
-
-           /* // default VOD resolution in 2 formats
-            { type: "video/webm",
-              src:  "//cdn.flowplayer.org/202777/84049-bauhaus.webm" },
-            { type: "video/mp4",
-              src:  "//cdn.flowplayer.org/202777/84049-bauhaus.mp4" },*/
-
-            // default VOD resolution via RTMP for Flash in old browsers
-           { type: "video/flash",
-              src:  "bein" }
-        ]
-    },
-    rtmp: "rtmp://167.99.232.44/live",
-    splash: "//drive.cdn.flowplayer.org/202777/84049-snap.jpg",
-    ratio: 5/12,
-    live: true,
-    twitter: "https://www.facebook.com/mohtasm.sawilh",
-    facebook: "https://www.facebook.com/mohtasm.sawilh",
-    embed: {
-        iframe: "https://www.facebook.com/mohtasm.sawilh"
-    }
-});
 
      </script>
 
@@ -112,6 +72,12 @@
        $(function () {
 
         var api = flowplayer(".flowplayer",{});
+        api.load({
+        sources: [
+            { type: "application/x-mepgurl",
+              src:  "http://s1.electru.biz:8080/live/megolove61@gmail.com/8Pi8b62lUy/49872.m3u8" }
+          ]
+        });
         api.on("pause", function (e, api) {
         }).on("resume", function (e, api) {
         }).on("progress", function (e, api) {
