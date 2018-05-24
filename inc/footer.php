@@ -41,7 +41,7 @@
                           </div>
                         </div>
     </div>
-        <script src="http://hlstester.com/assets/js/jquery-3.2.1.js"></script>
+        <script src="js/jquery-3.2.1.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/menu.js"></script>
         <script src="js/plagn.js"></script>
