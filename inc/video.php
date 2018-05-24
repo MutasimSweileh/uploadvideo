@@ -14,13 +14,13 @@
                 </div>
 
 <?php }else{ ?>
- <form action="javascript:;" onsubmit="return loadPlayer();">
+ <form style="display: none;" action="javascript:;" onsubmit="return loadPlayer();">
 <div class=form-group id=url-form>
 <div class=input-group>
 <span class="input-group-addon btn btn-success url-play-icon-container" onclick="return loadPlayer();">
 <img src="http://hlstester.com//assets/img/play-button-32.png" width=18 height=18 class=url-play-icon alt="Play Button">
 </span>
-<input class="form-control url-play-input" id=stream_url placeholder="Insert your streaming URL here and play it." value="https://youtu.be/WOmemQJAeCI" required>
+<input class="form-control url-play-input" id=stream_url placeholder="Insert your streaming URL here and play it." value="http://s1.electru.biz:8080/live/megolove61@gmail.com/8Pi8b62lUy/31977.m3u8" required>
 </div>
 </div>
 </form>
