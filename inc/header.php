@@ -11,6 +11,7 @@
       <link rel='stylesheet'  href="css/style.css" />
       <link rel="stylesheet" href="css/skin/skin.css">
       <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+      <link href="http://hlstester.com/assets/css/style.css" rel=stylesheet type="text/css">
 
       <div id="fb-root"></div>
         <script>(function(d, s, id) {
