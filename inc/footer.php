@@ -51,24 +51,6 @@
         <script src="//releases.flowplayer.org/hlsjs/flowplayer.hlsjs.light.min.js"></script>
         <script>$('.dropdown-toggle').dropdown()</script>
 
-       <script>
-
-        flowplayer('#player', {
-            live: true,  // set if it's a live stream
-            ratio: 9/16, // set the aspect ratio of the stream
-            clip: {
-                sources: [
-
-                   // { type: "application/x-mpegurl", src: "http://s1.electru.biz:8080/live/megolove61@gmail.com/8Pi8b62lUy/31309.m3u8"},
-                    { type: "application/x-mpegurl", src: "http://s1.electru.biz:8080/live/megolove61@gmail.com/8Pi8b62lUy/49872.m3u8"}
-                ]
-            }
-        });
-
-
-     </script>
-
-
         <script>
        $(function () {
 
