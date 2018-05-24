@@ -14,7 +14,17 @@
                 </div>
 
 <?php }else{ ?>
- <div id="player"></div>
+ <form action="javascript:;" onsubmit="return loadPlayer();">
+<div class=form-group id=url-form>
+<div class=input-group>
+<span class="input-group-addon btn btn-success url-play-icon-container" onclick="return loadPlayer();">
+<img src="http://hlstester.com//assets/img/play-button-32.png" width=18 height=18 class=url-play-icon alt="Play Button">
+</span>
+<input class="form-control url-play-input" id=stream_url placeholder="Insert your streaming URL here and play it." value="https://youtu.be/WOmemQJAeCI" required>
+</div>
+</div>
+</form>
+<div class=player id=player><div class=player-inner></div></div>
 <!--<div data-live="true" data-ratio="0.5625" data-share="false" class="flowplayer">
 
    <video data-title="Freinds Bien Sport <?=isv("vid")?>">
