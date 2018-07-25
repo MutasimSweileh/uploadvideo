@@ -8,7 +8,9 @@
               <li><a href="privacy.html">Privacy</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
-            <p>All right reserved . built by <a href="#">Mohtasm Mohamed</a></p>
+            <p style="
+    text-align:  center;
+" >All right reserved . built by <a href="#">Mohtasm Mohamed</a></p>
             <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
             <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
             <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
